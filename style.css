@@ -56,6 +56,41 @@ body {
     color: var(--dark-brown);
 }
 
+/* Hide nav menu and show hamburger on small screens */
+@media (max-width: 900px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100vw;
+    background: var(--secondary-green, #1a5f23);
+    z-index: 1000;
+    padding: 20px 0;
+  }
+  .nav-menu.active {
+    display: flex;
+  }
+  .nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--secondary-green, #1a5f23);
+    cursor: pointer;
+    position: absolute;
+    right: 24px;
+    top: 18px;
+    z-index: 1100;
+  }
+}
+
+/* Hide hamburger on desktop */
+.nav-toggle {
+  display: none;
+}
+
 .nav-menu {
     display: flex;
     list-style: none;

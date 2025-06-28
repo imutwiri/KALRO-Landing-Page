@@ -18,6 +18,10 @@
                         <p>Kenya Agricultural and Livestock Research Organization</p>
                     </div>
                 </div>
+
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                  <i class="fa fa-bars"></i>
+                </button>
                 <ul class="nav-menu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About Us <i class="fa-solid fa-caret-down"></i></a>
@@ -344,6 +348,16 @@
 
       showSlides(slideIndex);
       startAutoSlide();
+      });
+    </script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        navToggle.addEventListener('click', function() {
+         navMenu.classList.toggle('active');
+        });
       });
     </script>
 
